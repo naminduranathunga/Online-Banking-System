@@ -1,4 +1,4 @@
+[bank]
 name=LMN Bank
-
-[Test]
-hi=32
+balance=1000
+account_no=0

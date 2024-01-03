@@ -12,9 +12,9 @@
 #include <string>
 
 #include "Account.h"
+#include "User.h"
 #include "../lib/ConfigurationList.h"
 
-class User {};
 
 class BankingSystem{
 public:

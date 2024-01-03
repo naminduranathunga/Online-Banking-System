@@ -16,12 +16,18 @@ BankingSystem::BankingSystem() {
 	try
 	{
 		config->LoadFromFile();
-		string s = config->GetBlock("unnamed")->GetPropertyValue("name");
+		string s = config->GetBlock("bank")->GetPropertyValue("name");
 		cout << s << endl;
+		system("pause");
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
+	}
+	catch (...){
+		cout << "Error loading configuration file" << endl;
+		system("pause");
+		exit(1);
 	}
 	
 	BankOwnAccount = new Account();
@@ -63,8 +69,39 @@ void BankingSystem::login() {
 	cin >> password;
 
 	// get user by username
-	User* user = getUserByUsername(username);
-	//validate password
+	User* user = nullptr;
+	try
+	{
+		/* code */
+		user = User::fromFile("data\\users\\" + username + ".txt");
+	}
+	catch(const char* e)
+	{
+		std::cerr << e << '\n';
+	}
+	catch(...){
+		cout << "Error loading user file" << endl;
+		system("pause");
+		exit(1);
+	}
+	
 
+	//validate password
+	if (user->authenticate(password)) {
+		this->currentUser = user;
+		cout << "Login successful" << endl;
+		system("pause");
+
+		user->menu();
+	}
+	else {
+		cout << "Invalid username or password" << endl;
+		system("pause");
+	}
+
+	this->currentUser = nullptr;
+	//test
+	User *test = new User("test", "test", 1);
+	test->save();
 	//display error or go to user's main menu
 }
