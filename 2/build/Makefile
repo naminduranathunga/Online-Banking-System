@@ -47,19 +47,33 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
+<<<<<<< HEAD
 CMAKE_COMMAND = E:\MinGW64\bin\cmake.exe
 
 # The command to remove a file.
 RM = E:\MinGW64\bin\cmake.exe -E rm -f
+=======
+CMAKE_COMMAND = D:\MinGW64\bin\cmake.exe
+
+# The command to remove a file.
+RM = D:\MinGW64\bin\cmake.exe -E rm -f
+>>>>>>> 4b3bd5e98fd2adf1f537cb6e569d81e8a85720f7
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = "C:\Users\Rashmi Kavindya\Desktop\Online-Banking-System\2"
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = "C:\Users\Rashmi Kavindya\Desktop\Online-Banking-System\2\build"
+=======
+CMAKE_SOURCE_DIR = C:\Users\Asus\Desktop\Online-Banking-System\2
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = C:\Users\Asus\Desktop\Online-Banking-System\2\build
+>>>>>>> 4b3bd5e98fd2adf1f537cb6e569d81e8a85720f7
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +81,11 @@ CMAKE_BINARY_DIR = "C:\Users\Rashmi Kavindya\Desktop\Online-Banking-System\2\bui
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+<<<<<<< HEAD
 	E:\MinGW64\bin\cmake.exe -E echo "No interactive CMake dialog available."
+=======
+	D:\MinGW64\bin\cmake.exe -E echo "No interactive CMake dialog available."
+>>>>>>> 4b3bd5e98fd2adf1f537cb6e569d81e8a85720f7
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +95,11 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+<<<<<<< HEAD
 	E:\MinGW64\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+=======
+	D:\MinGW64\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+>>>>>>> 4b3bd5e98fd2adf1f537cb6e569d81e8a85720f7
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +108,15 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Rashmi Kavindya\Desktop\Online-Banking-System\2\build\CMakeFiles" "C:\Users\Rashmi Kavindya\Desktop\Online-Banking-System\2\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Rashmi Kavindya\Desktop\Online-Banking-System\2\build\CMakeFiles" 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Asus\Desktop\Online-Banking-System\2\build\CMakeFiles C:\Users\Asus\Desktop\Online-Banking-System\2\build\\CMakeFiles\progress.marks
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Asus\Desktop\Online-Banking-System\2\build\CMakeFiles 0
+>>>>>>> 4b3bd5e98fd2adf1f537cb6e569d81e8a85720f7
 .PHONY : all
 
 # The main clean target
