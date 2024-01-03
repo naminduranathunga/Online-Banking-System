@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "BankingSystem.pdb"
   "CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.obj"
   "CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.obj.d"
+  "CMakeFiles/BankingSystem.dir/inc/User.cpp.obj"
+  "CMakeFiles/BankingSystem.dir/inc/User.cpp.obj.d"
   "CMakeFiles/BankingSystem.dir/main.cpp.obj"
   "CMakeFiles/BankingSystem.dir/main.cpp.obj.d"
   "libBankingSystem.dll.a"
