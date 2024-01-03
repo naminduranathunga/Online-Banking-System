@@ -1,10 +1,9 @@
 #include "Customer.h"
-#include "../lib/ConfigurationLoaderLib.h"
 
 using namespace std;
 
 // Namindu
-Customer::Customer(const string& username, const string& password, int type, ConfigurationList* config = nullptr)
+Customer::Customer(const string& username, const string& password, int type, ConfigurationList* config)
     : User(username, password, type) {
     this->accounts = vector<Account*>();
 

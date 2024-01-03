@@ -11,6 +11,7 @@
 #include <vector>
 #include "User.h"
 #include "Account.h"
+#include "../lib/ConfigurationLoaderLib.h"
 
 class Customer : public User {
     public:

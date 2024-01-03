@@ -23,8 +23,8 @@ public:
 	 */
 	User* currentUser = nullptr;
 	Account* BankOwnAccount = nullptr;
-	int date = 0;
-	float annualInterestRate;
+	static int date;
+	static float annualInterestRate;
 
 	/**
 	* Methods.

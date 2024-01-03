@@ -12,25 +12,22 @@ using namespace std;
 
 BankingSystem::BankingSystem() {
 	// load data from files
-	ConfigurationList* config = new ConfigurationList("..\\data\\users\\customer001.txt");
-	/*try
-	{
-		config->LoadFromFile();
-		string s = config->GetBlock("bank")->GetPropertyValue("name");
-		cout << s << endl;
-		system("pause");
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-	catch (...){
+	ConfigurationList* config = new ConfigurationList("data\\bankconfig.txt");
+	config->LoadFromFile();
+
+	if (!config->IsLoaded()){
 		cout << "Error loading configuration file" << endl;
 		system("pause");
 		exit(1);
-	}*/
+	}
 	
+	PropertyBlock* bank = config->GetBlock("bank");
+	date = stoi(bank->GetPropertyValue("day"));
+	annualInterestRate = stof(bank->GetPropertyValue("annual_interest_rate"));
+	string bank_acc_num = bank->GetPropertyValue("account_no");
+
 	BankOwnAccount = new Account();
+	
 }
 
 void BankingSystem::mainMenu() {
@@ -72,7 +69,6 @@ void BankingSystem::login() {
 	User* user = nullptr;
 	try
 	{
-		/* code */
 		user = User::fromFile("data\\users\\" + username + ".txt");
 	}
 	catch(const char* e)

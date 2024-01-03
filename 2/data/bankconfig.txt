@@ -1,4 +1,5 @@
 [bank]
 name=LMN Bank
-balance=1000
+day=1
+annual_interest_rate=0.01
 account_no=0
