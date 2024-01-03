@@ -11,8 +11,9 @@
 #include <iostream>
 #include <string>
 
-class Account {
-};
+#include "Account.h"
+#include "../lib/ConfigurationList.h"
+
 class User {};
 
 class BankingSystem{
@@ -28,6 +29,11 @@ public:
 	/**
 	* Methods.
 	**/
+	/**
+	 * \brief Initilize bank profile and load data from files in the constructor.
+	*/
+	BankingSystem();
+
 	void login();
 
 	/**

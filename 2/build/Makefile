@@ -47,33 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-<<<<<<< HEAD
-CMAKE_COMMAND = E:\MinGW64\bin\cmake.exe
+CMAKE_COMMAND = D:\Dev-Cpp\MinGW64\bin\cmake.exe
 
 # The command to remove a file.
-RM = E:\MinGW64\bin\cmake.exe -E rm -f
-=======
-CMAKE_COMMAND = D:\MinGW64\bin\cmake.exe
-
-# The command to remove a file.
-RM = D:\MinGW64\bin\cmake.exe -E rm -f
->>>>>>> 4b3bd5e98fd2adf1f537cb6e569d81e8a85720f7
+RM = D:\Dev-Cpp\MinGW64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
-CMAKE_SOURCE_DIR = "C:\Users\Rashmi Kavindya\Desktop\Online-Banking-System\2"
+CMAKE_SOURCE_DIR = C:\Users\Namindu\source\repos\Online-Banking-System\2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Rashmi Kavindya\Desktop\Online-Banking-System\2\build"
-=======
-CMAKE_SOURCE_DIR = C:\Users\Asus\Desktop\Online-Banking-System\2
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Asus\Desktop\Online-Banking-System\2\build
->>>>>>> 4b3bd5e98fd2adf1f537cb6e569d81e8a85720f7
+CMAKE_BINARY_DIR = C:\Users\Namindu\source\repos\Online-Banking-System\2\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -81,11 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\Asus\Desktop\Online-Banking-System\2\build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-<<<<<<< HEAD
-	E:\MinGW64\bin\cmake.exe -E echo "No interactive CMake dialog available."
-=======
-	D:\MinGW64\bin\cmake.exe -E echo "No interactive CMake dialog available."
->>>>>>> 4b3bd5e98fd2adf1f537cb6e569d81e8a85720f7
+	D:\Dev-Cpp\MinGW64\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -95,11 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-<<<<<<< HEAD
-	E:\MinGW64\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-=======
-	D:\MinGW64\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
->>>>>>> 4b3bd5e98fd2adf1f537cb6e569d81e8a85720f7
+	D:\Dev-Cpp\MinGW64\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -108,15 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Rashmi Kavindya\Desktop\Online-Banking-System\2\build\CMakeFiles" "C:\Users\Rashmi Kavindya\Desktop\Online-Banking-System\2\build\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles C:\Users\Namindu\source\repos\Online-Banking-System\2\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Rashmi Kavindya\Desktop\Online-Banking-System\2\build\CMakeFiles" 0
-=======
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Asus\Desktop\Online-Banking-System\2\build\CMakeFiles C:\Users\Asus\Desktop\Online-Banking-System\2\build\\CMakeFiles\progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Asus\Desktop\Online-Banking-System\2\build\CMakeFiles 0
->>>>>>> 4b3bd5e98fd2adf1f537cb6e569d81e8a85720f7
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -155,6 +127,30 @@ BankingSystem: cmake_check_build_system
 BankingSystem/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/build
 .PHONY : BankingSystem/fast
+
+inc/Account.obj: inc/Account.cpp.obj
+.PHONY : inc/Account.obj
+
+# target to build an object file
+inc/Account.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Account.cpp.obj
+.PHONY : inc/Account.cpp.obj
+
+inc/Account.i: inc/Account.cpp.i
+.PHONY : inc/Account.i
+
+# target to preprocess a source file
+inc/Account.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Account.cpp.i
+.PHONY : inc/Account.cpp.i
+
+inc/Account.s: inc/Account.cpp.s
+.PHONY : inc/Account.s
+
+# target to generate assembly for a file
+inc/Account.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Account.cpp.s
+.PHONY : inc/Account.cpp.s
 
 inc/BankingSystem.obj: inc/BankingSystem.cpp.obj
 .PHONY : inc/BankingSystem.obj
@@ -204,6 +200,54 @@ inc/User.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/User.cpp.s
 .PHONY : inc/User.cpp.s
 
+lib/ConfigurationList.obj: lib/ConfigurationList.cpp.obj
+.PHONY : lib/ConfigurationList.obj
+
+# target to build an object file
+lib/ConfigurationList.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.obj
+.PHONY : lib/ConfigurationList.cpp.obj
+
+lib/ConfigurationList.i: lib/ConfigurationList.cpp.i
+.PHONY : lib/ConfigurationList.i
+
+# target to preprocess a source file
+lib/ConfigurationList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.i
+.PHONY : lib/ConfigurationList.cpp.i
+
+lib/ConfigurationList.s: lib/ConfigurationList.cpp.s
+.PHONY : lib/ConfigurationList.s
+
+# target to generate assembly for a file
+lib/ConfigurationList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.s
+.PHONY : lib/ConfigurationList.cpp.s
+
+lib/PropertyBlock.obj: lib/PropertyBlock.cpp.obj
+.PHONY : lib/PropertyBlock.obj
+
+# target to build an object file
+lib/PropertyBlock.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.obj
+.PHONY : lib/PropertyBlock.cpp.obj
+
+lib/PropertyBlock.i: lib/PropertyBlock.cpp.i
+.PHONY : lib/PropertyBlock.i
+
+# target to preprocess a source file
+lib/PropertyBlock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.i
+.PHONY : lib/PropertyBlock.cpp.i
+
+lib/PropertyBlock.s: lib/PropertyBlock.cpp.s
+.PHONY : lib/PropertyBlock.s
+
+# target to generate assembly for a file
+lib/PropertyBlock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.s
+.PHONY : lib/PropertyBlock.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -237,12 +281,21 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... BankingSystem
+	@echo ... inc/Account.obj
+	@echo ... inc/Account.i
+	@echo ... inc/Account.s
 	@echo ... inc/BankingSystem.obj
 	@echo ... inc/BankingSystem.i
 	@echo ... inc/BankingSystem.s
 	@echo ... inc/User.obj
 	@echo ... inc/User.i
 	@echo ... inc/User.s
+	@echo ... lib/ConfigurationList.obj
+	@echo ... lib/ConfigurationList.i
+	@echo ... lib/ConfigurationList.s
+	@echo ... lib/PropertyBlock.obj
+	@echo ... lib/PropertyBlock.i
+	@echo ... lib/PropertyBlock.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

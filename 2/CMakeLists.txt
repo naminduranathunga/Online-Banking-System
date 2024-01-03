@@ -3,6 +3,7 @@ project(BankingSystem)
 
 # Add all CPP files in ./inc directory to the project
 file(GLOB SOURCES "inc/*.cpp")
+file(GLOB LIBRARIES "lib/*.cpp")
 #file(GLOB SOURCES_COMMANDS "inc/commands/*.cpp")
 #file(GLOB UNIT_TESTS "unit_tests/*.cpp")
 
@@ -15,7 +16,7 @@ set(CMAKE_GENERATOR "MinGW Makefiles")
 
 
 # Create the executable from the sources and the main file
-add_executable(BankingSystem ${SOURCES} ${MAIN_FILE})
+add_executable(BankingSystem ${SOURCES} ${LIBRARIES} ${MAIN_FILE})
 
 #unit tests
 #add_executable(test ${SOURCES} ${SOURCES_COMMANDS} ${UNIT_TESTS} ${UNIT_TEST_FILE})

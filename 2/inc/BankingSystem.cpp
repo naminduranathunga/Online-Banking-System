@@ -10,6 +10,23 @@
 
 using namespace std;
 
+BankingSystem::BankingSystem() {
+	// load data from files
+	ConfigurationList* config = new ConfigurationList("..\\data\\bankconfig.txt");
+	try
+	{
+		config->LoadFromFile();
+		string s = config->GetBlock("unnamed")->GetPropertyValue("name");
+		cout << s << endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
+	BankOwnAccount = new Account();
+}
+
 void BankingSystem::mainMenu() {
 	while (1) {
 		system("cls");

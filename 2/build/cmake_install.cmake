@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Install script for directory: C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2
-=======
-# Install script for directory: C:/Users/Asus/Desktop/Online-Banking-System/2
->>>>>>> 4b3bd5e98fd2adf1f537cb6e569d81e8a85720f7
+# Install script for directory: C:/Users/Namindu/source/repos/Online-Banking-System/2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,11 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-<<<<<<< HEAD
-  set(CMAKE_OBJDUMP "E:/MinGW64/bin/objdump.exe")
-=======
-  set(CMAKE_OBJDUMP "D:/MinGW64/bin/objdump.exe")
->>>>>>> 4b3bd5e98fd2adf1f537cb6e569d81e8a85720f7
+  set(CMAKE_OBJDUMP "D:/Dev-Cpp/MinGW64/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -53,9 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-<<<<<<< HEAD
-file(WRITE "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/build/${CMAKE_INSTALL_MANIFEST}"
-=======
-file(WRITE "C:/Users/Asus/Desktop/Online-Banking-System/2/build/${CMAKE_INSTALL_MANIFEST}"
->>>>>>> 4b3bd5e98fd2adf1f537cb6e569d81e8a85720f7
+file(WRITE "C:/Users/Namindu/source/repos/Online-Banking-System/2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
