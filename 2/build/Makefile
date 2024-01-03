@@ -152,6 +152,30 @@ inc/Account.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Account.cpp.s
 .PHONY : inc/Account.cpp.s
 
+inc/Administrator.obj: inc/Administrator.cpp.obj
+.PHONY : inc/Administrator.obj
+
+# target to build an object file
+inc/Administrator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.obj
+.PHONY : inc/Administrator.cpp.obj
+
+inc/Administrator.i: inc/Administrator.cpp.i
+.PHONY : inc/Administrator.i
+
+# target to preprocess a source file
+inc/Administrator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.i
+.PHONY : inc/Administrator.cpp.i
+
+inc/Administrator.s: inc/Administrator.cpp.s
+.PHONY : inc/Administrator.s
+
+# target to generate assembly for a file
+inc/Administrator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.s
+.PHONY : inc/Administrator.cpp.s
+
 inc/BankingSystem.obj: inc/BankingSystem.cpp.obj
 .PHONY : inc/BankingSystem.obj
 
@@ -175,6 +199,30 @@ inc/BankingSystem.s: inc/BankingSystem.cpp.s
 inc/BankingSystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.s
 .PHONY : inc/BankingSystem.cpp.s
+
+inc/Customer.obj: inc/Customer.cpp.obj
+.PHONY : inc/Customer.obj
+
+# target to build an object file
+inc/Customer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Customer.cpp.obj
+.PHONY : inc/Customer.cpp.obj
+
+inc/Customer.i: inc/Customer.cpp.i
+.PHONY : inc/Customer.i
+
+# target to preprocess a source file
+inc/Customer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Customer.cpp.i
+.PHONY : inc/Customer.cpp.i
+
+inc/Customer.s: inc/Customer.cpp.s
+.PHONY : inc/Customer.s
+
+# target to generate assembly for a file
+inc/Customer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Customer.cpp.s
+.PHONY : inc/Customer.cpp.s
 
 inc/User.obj: inc/User.cpp.obj
 .PHONY : inc/User.obj
@@ -284,9 +332,15 @@ help:
 	@echo ... inc/Account.obj
 	@echo ... inc/Account.i
 	@echo ... inc/Account.s
+	@echo ... inc/Administrator.obj
+	@echo ... inc/Administrator.i
+	@echo ... inc/Administrator.s
 	@echo ... inc/BankingSystem.obj
 	@echo ... inc/BankingSystem.i
 	@echo ... inc/BankingSystem.s
+	@echo ... inc/Customer.obj
+	@echo ... inc/Customer.i
+	@echo ... inc/Customer.s
 	@echo ... inc/User.obj
 	@echo ... inc/User.i
 	@echo ... inc/User.s

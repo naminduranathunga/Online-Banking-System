@@ -82,10 +82,24 @@ CMakeFiles/BankingSystem.dir/inc/Account.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BankingSystem.dir/inc/Account.cpp.s"
 	D:\Dev-Cpp\MinGW64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Namindu\source\repos\Online-Banking-System\2\inc\Account.cpp -o CMakeFiles\BankingSystem.dir\inc\Account.cpp.s
 
+CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.obj: CMakeFiles/BankingSystem.dir/flags.make
+CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.obj: C:/Users/Namindu/source/repos/Online-Banking-System/2/inc/Administrator.cpp
+CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.obj: CMakeFiles/BankingSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.obj"
+	D:\Dev-Cpp\MinGW64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.obj -MF CMakeFiles\BankingSystem.dir\inc\Administrator.cpp.obj.d -o CMakeFiles\BankingSystem.dir\inc\Administrator.cpp.obj -c C:\Users\Namindu\source\repos\Online-Banking-System\2\inc\Administrator.cpp
+
+CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.i"
+	D:\Dev-Cpp\MinGW64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Namindu\source\repos\Online-Banking-System\2\inc\Administrator.cpp > CMakeFiles\BankingSystem.dir\inc\Administrator.cpp.i
+
+CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.s"
+	D:\Dev-Cpp\MinGW64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Namindu\source\repos\Online-Banking-System\2\inc\Administrator.cpp -o CMakeFiles\BankingSystem.dir\inc\Administrator.cpp.s
+
 CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.obj: CMakeFiles/BankingSystem.dir/flags.make
 CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.obj: C:/Users/Namindu/source/repos/Online-Banking-System/2/inc/BankingSystem.cpp
 CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.obj: CMakeFiles/BankingSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.obj"
 	D:\Dev-Cpp\MinGW64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.obj -MF CMakeFiles\BankingSystem.dir\inc\BankingSystem.cpp.obj.d -o CMakeFiles\BankingSystem.dir\inc\BankingSystem.cpp.obj -c C:\Users\Namindu\source\repos\Online-Banking-System\2\inc\BankingSystem.cpp
 
 CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.i: cmake_force
@@ -96,10 +110,24 @@ CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.s"
 	D:\Dev-Cpp\MinGW64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Namindu\source\repos\Online-Banking-System\2\inc\BankingSystem.cpp -o CMakeFiles\BankingSystem.dir\inc\BankingSystem.cpp.s
 
+CMakeFiles/BankingSystem.dir/inc/Customer.cpp.obj: CMakeFiles/BankingSystem.dir/flags.make
+CMakeFiles/BankingSystem.dir/inc/Customer.cpp.obj: C:/Users/Namindu/source/repos/Online-Banking-System/2/inc/Customer.cpp
+CMakeFiles/BankingSystem.dir/inc/Customer.cpp.obj: CMakeFiles/BankingSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BankingSystem.dir/inc/Customer.cpp.obj"
+	D:\Dev-Cpp\MinGW64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BankingSystem.dir/inc/Customer.cpp.obj -MF CMakeFiles\BankingSystem.dir\inc\Customer.cpp.obj.d -o CMakeFiles\BankingSystem.dir\inc\Customer.cpp.obj -c C:\Users\Namindu\source\repos\Online-Banking-System\2\inc\Customer.cpp
+
+CMakeFiles/BankingSystem.dir/inc/Customer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BankingSystem.dir/inc/Customer.cpp.i"
+	D:\Dev-Cpp\MinGW64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Namindu\source\repos\Online-Banking-System\2\inc\Customer.cpp > CMakeFiles\BankingSystem.dir\inc\Customer.cpp.i
+
+CMakeFiles/BankingSystem.dir/inc/Customer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BankingSystem.dir/inc/Customer.cpp.s"
+	D:\Dev-Cpp\MinGW64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Namindu\source\repos\Online-Banking-System\2\inc\Customer.cpp -o CMakeFiles\BankingSystem.dir\inc\Customer.cpp.s
+
 CMakeFiles/BankingSystem.dir/inc/User.cpp.obj: CMakeFiles/BankingSystem.dir/flags.make
 CMakeFiles/BankingSystem.dir/inc/User.cpp.obj: C:/Users/Namindu/source/repos/Online-Banking-System/2/inc/User.cpp
 CMakeFiles/BankingSystem.dir/inc/User.cpp.obj: CMakeFiles/BankingSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BankingSystem.dir/inc/User.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BankingSystem.dir/inc/User.cpp.obj"
 	D:\Dev-Cpp\MinGW64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BankingSystem.dir/inc/User.cpp.obj -MF CMakeFiles\BankingSystem.dir\inc\User.cpp.obj.d -o CMakeFiles\BankingSystem.dir\inc\User.cpp.obj -c C:\Users\Namindu\source\repos\Online-Banking-System\2\inc\User.cpp
 
 CMakeFiles/BankingSystem.dir/inc/User.cpp.i: cmake_force
@@ -113,7 +141,7 @@ CMakeFiles/BankingSystem.dir/inc/User.cpp.s: cmake_force
 CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.obj: CMakeFiles/BankingSystem.dir/flags.make
 CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.obj: C:/Users/Namindu/source/repos/Online-Banking-System/2/lib/ConfigurationList.cpp
 CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.obj: CMakeFiles/BankingSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.obj"
 	D:\Dev-Cpp\MinGW64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.obj -MF CMakeFiles\BankingSystem.dir\lib\ConfigurationList.cpp.obj.d -o CMakeFiles\BankingSystem.dir\lib\ConfigurationList.cpp.obj -c C:\Users\Namindu\source\repos\Online-Banking-System\2\lib\ConfigurationList.cpp
 
 CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.i: cmake_force
@@ -127,7 +155,7 @@ CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.s: cmake_force
 CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.obj: CMakeFiles/BankingSystem.dir/flags.make
 CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.obj: C:/Users/Namindu/source/repos/Online-Banking-System/2/lib/PropertyBlock.cpp
 CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.obj: CMakeFiles/BankingSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.obj"
 	D:\Dev-Cpp\MinGW64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.obj -MF CMakeFiles\BankingSystem.dir\lib\PropertyBlock.cpp.obj.d -o CMakeFiles\BankingSystem.dir\lib\PropertyBlock.cpp.obj -c C:\Users\Namindu\source\repos\Online-Banking-System\2\lib\PropertyBlock.cpp
 
 CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.i: cmake_force
@@ -141,7 +169,7 @@ CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.s: cmake_force
 CMakeFiles/BankingSystem.dir/main.cpp.obj: CMakeFiles/BankingSystem.dir/flags.make
 CMakeFiles/BankingSystem.dir/main.cpp.obj: C:/Users/Namindu/source/repos/Online-Banking-System/2/main.cpp
 CMakeFiles/BankingSystem.dir/main.cpp.obj: CMakeFiles/BankingSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BankingSystem.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/BankingSystem.dir/main.cpp.obj"
 	D:\Dev-Cpp\MinGW64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BankingSystem.dir/main.cpp.obj -MF CMakeFiles\BankingSystem.dir\main.cpp.obj.d -o CMakeFiles\BankingSystem.dir\main.cpp.obj -c C:\Users\Namindu\source\repos\Online-Banking-System\2\main.cpp
 
 CMakeFiles/BankingSystem.dir/main.cpp.i: cmake_force
@@ -155,7 +183,9 @@ CMakeFiles/BankingSystem.dir/main.cpp.s: cmake_force
 # Object files for target BankingSystem
 BankingSystem_OBJECTS = \
 "CMakeFiles/BankingSystem.dir/inc/Account.cpp.obj" \
+"CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.obj" \
 "CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.obj" \
+"CMakeFiles/BankingSystem.dir/inc/Customer.cpp.obj" \
 "CMakeFiles/BankingSystem.dir/inc/User.cpp.obj" \
 "CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.obj" \
 "CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.obj" \
@@ -164,21 +194,23 @@ BankingSystem_OBJECTS = \
 # External object files for target BankingSystem
 BankingSystem_EXTERNAL_OBJECTS =
 
-BankingSystem.exe: CMakeFiles/BankingSystem.dir/inc/Account.cpp.obj
-BankingSystem.exe: CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.obj
-BankingSystem.exe: CMakeFiles/BankingSystem.dir/inc/User.cpp.obj
-BankingSystem.exe: CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.obj
-BankingSystem.exe: CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.obj
-BankingSystem.exe: CMakeFiles/BankingSystem.dir/main.cpp.obj
-BankingSystem.exe: CMakeFiles/BankingSystem.dir/build.make
-BankingSystem.exe: CMakeFiles/BankingSystem.dir/linkLibs.rsp
-BankingSystem.exe: CMakeFiles/BankingSystem.dir/objects1.rsp
-BankingSystem.exe: CMakeFiles/BankingSystem.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable BankingSystem.exe"
+C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe: CMakeFiles/BankingSystem.dir/inc/Account.cpp.obj
+C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe: CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.obj
+C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe: CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.obj
+C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe: CMakeFiles/BankingSystem.dir/inc/Customer.cpp.obj
+C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe: CMakeFiles/BankingSystem.dir/inc/User.cpp.obj
+C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe: CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.obj
+C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe: CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.obj
+C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe: CMakeFiles/BankingSystem.dir/main.cpp.obj
+C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe: CMakeFiles/BankingSystem.dir/build.make
+C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe: CMakeFiles/BankingSystem.dir/linkLibs.rsp
+C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe: CMakeFiles/BankingSystem.dir/objects1.rsp
+C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe: CMakeFiles/BankingSystem.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Namindu\source\repos\Online-Banking-System\2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable C:\Users\Namindu\source\repos\Online-Banking-System\2\BankingSystem.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\BankingSystem.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/BankingSystem.dir/build: BankingSystem.exe
+CMakeFiles/BankingSystem.dir/build: C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe
 .PHONY : CMakeFiles/BankingSystem.dir/build
 
 CMakeFiles/BankingSystem.dir/clean:
