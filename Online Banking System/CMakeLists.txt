@@ -12,7 +12,7 @@ endif()
 project ("Online Banking System")
 
 # Add source to this project's executable.
-add_executable (CMakeTarget "Online Banking System.cpp" "Online Banking System.h")
+add_executable (CMakeTarget "Online Banking System.cpp" "Online Banking System.h" "BankingSystem.h")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET CMakeTarget PROPERTY CXX_STANDARD 20)
