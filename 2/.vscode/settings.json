@@ -55,6 +55,7 @@
         "stdexcept": "cpp",
         "stop_token": "cpp",
         "streambuf": "cpp",
+<<<<<<< HEAD
         "thread": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
@@ -74,4 +75,9 @@
         "xtr1common": "cpp",
         "xutility": "cpp"
     }
+=======
+        "typeinfo": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+>>>>>>> 5665c77a14e34a85cdbe7e34db828fdcb27ce209
 }
