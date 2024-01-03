@@ -9,10 +9,11 @@ class Account
     long account_no;
     float balance;
     int account_type;
+    string file_name;
 
     public:
-    void load();
+    void load(string filename);
     void save();
-    void deposit(string text, float amount);
-    void withdraw(string text, float amount);
+    void deposit(string text, float amount, int day);
+    void withdraw(string text, float amount, int day);
 };
