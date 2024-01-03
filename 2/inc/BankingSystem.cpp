@@ -12,8 +12,8 @@ using namespace std;
 
 BankingSystem::BankingSystem() {
 	// load data from files
-	ConfigurationList* config = new ConfigurationList("..\\data\\bankconfig.txt");
-	try
+	ConfigurationList* config = new ConfigurationList("..\\data\\users\\customer001.txt");
+	/*try
 	{
 		config->LoadFromFile();
 		string s = config->GetBlock("bank")->GetPropertyValue("name");
@@ -28,7 +28,7 @@ BankingSystem::BankingSystem() {
 		cout << "Error loading configuration file" << endl;
 		system("pause");
 		exit(1);
-	}
+	}*/
 	
 	BankOwnAccount = new Account();
 }

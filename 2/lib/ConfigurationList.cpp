@@ -5,11 +5,13 @@ using namespace std;
 ConfigurationList::ConfigurationList() {
 	this->filename = "";
 	this->isLoaded = false;
+	blocks = vector<PropertyBlock*>();
 }
 
 ConfigurationList::ConfigurationList(string filename) {
 	this->filename = filename;
 	this->isLoaded = false;
+	blocks = vector<PropertyBlock*>();
 }
 
 ConfigurationList::~ConfigurationList() {
