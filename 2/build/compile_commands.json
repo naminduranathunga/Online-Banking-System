@@ -1,14 +1,14 @@
 [
 {
-  "directory": "C:/Users/Namindu/source/repos/Online-Banking-System/2/build",
-  "command": "D:\\Dev-Cpp\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\BankingSystem.cpp.obj -c C:\\Users\\Namindu\\source\\repos\\Online-Banking-System\\2\\inc\\BankingSystem.cpp",
-  "file": "C:/Users/Namindu/source/repos/Online-Banking-System/2/inc/BankingSystem.cpp",
+  "directory": "C:/Users/Asus/Desktop/Online-Banking-System/2/build",
+  "command": "D:\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\BankingSystem.cpp.obj -c C:\\Users\\Asus\\Desktop\\Online-Banking-System\\2\\inc\\BankingSystem.cpp",
+  "file": "C:/Users/Asus/Desktop/Online-Banking-System/2/inc/BankingSystem.cpp",
   "output": "CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.obj"
 },
 {
-  "directory": "C:/Users/Namindu/source/repos/Online-Banking-System/2/build",
-  "command": "D:\\Dev-Cpp\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\main.cpp.obj -c C:\\Users\\Namindu\\source\\repos\\Online-Banking-System\\2\\main.cpp",
-  "file": "C:/Users/Namindu/source/repos/Online-Banking-System/2/main.cpp",
+  "directory": "C:/Users/Asus/Desktop/Online-Banking-System/2/build",
+  "command": "D:\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\main.cpp.obj -c C:\\Users\\Asus\\Desktop\\Online-Banking-System\\2\\main.cpp",
+  "file": "C:/Users/Asus/Desktop/Online-Banking-System/2/main.cpp",
   "output": "CMakeFiles/BankingSystem.dir/main.cpp.obj"
 }
 ]
