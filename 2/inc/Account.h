@@ -1,3 +1,10 @@
+/*****************************************************************//**
+ * \file   Account.h
+ * \brief  
+ * 
+ * \author Himaya Kaumadi
+ * \date   January 2024
+ *********************************************************************/
 #include <iostream>
 #include <string>
 using namespace std;
@@ -12,8 +19,8 @@ class Account
     string file_name;
 
     public:
-    void load(string filename);
-    void save();
-    void deposit(string text, float amount, int day);
-    void withdraw(string text, float amount, int day);
+    void load(long account_no);
+    void save(long account_no,int day, float amount, string text, float balance);
+    void deposit(long account_no,string text, float amount, int day);
+    void withdraw(long account_no,string text, float amount, int day);
 };
