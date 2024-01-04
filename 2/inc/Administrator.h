@@ -27,12 +27,11 @@ public:
 
     void setAnnualInterest();
 
-    void checkOverdrafts();
+    void checkOverdrafts(string account);
 
-    double calculateOverdraftCharge();
+    double calculateOverdraftCharge(double amount);
 
-    double calculateAnnualInterest();
+    void calculateDailyInterest(string acc);
 
-    void save() override;
 };
 

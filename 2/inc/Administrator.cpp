@@ -9,6 +9,7 @@
 #include "Administrator.h"
 #include <string>
 #include <fstream>
+#include <cmath>
 
 using namespace std;
 
@@ -64,27 +65,41 @@ void Administrator::increaseDateByOne() {
         if(increaseDay == 'y') {
             // increase the date by 1 day
 	        day += 1; 
-            
-            // Check overdrafts and add overdraft charge
-            checkOverdrafts();
+
+            cout << "\nCurrent Date = Day " << day << endl;
+
+            ConfigurationList *newconfig = new ConfigurationList("data/bankconfig.txt");
+            config->GetBlock("bank")->AddProperty("day", to_string(day));
+
+            char accType;
+            cout << "\nAccount Types:\n"
+                 << "\t1 - Savings\n\t2- Current";
+            cout << "\nEnter the account type(1 or 2): ";
+            cin >> accType;
+
+            string accNumber;
+            cout << "Enter the account number: ";
+            cin.ignore(); // Ignore any leftover newline characters
+            getline(cin, accNumber);
+
+            switch (accType)
+            {
+            case '1':
+                calculateDailyInterest(accNumber);
+                break;
+            case '2':
+                checkOverdrafts(accNumber);
+                break;
+            default:
+                cout << "Invalid Input!";
+                break;
+            }
         }
-
-        cout << "Current Date = Day " << day << endl;
-
-        ConfigurationList *newconfig = new ConfigurationList("data/bankconfig.txt");
-        config->GetBlock("bank")->AddProperty("day", to_string(day));
-
     }
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
-
-    
-
-    // Calculate daily interest for savings accounts
-    double dailyInterest = (calculateAnnualInterest() / 365.0)   ;
-    //savingsAccount.balance += dailyInterest;
 
 }
 
@@ -117,18 +132,72 @@ void Administrator::setAnnualInterest() {
 }
 
 
-void Administrator::checkOverdrafts() {
-    // ... (implementation)
-	
-    cout << "Overdraft charge added to account " << endl;
+void Administrator::checkOverdrafts(string account) {
+
+    // load data from files
+	ConfigurationList* config = new ConfigurationList("data\\accounts\\" + account + ".txt");
+	try
+	{
+		config->LoadFromFile();
+		string amount = config->GetBlock("account")->GetPropertyValue("balance");
+		double currentBalance = std::stod(amount);
+
+        if(currentBalance < 0) {
+            cout << "\nYour current account has been over draft." << endl;
+            double absoluteValue = std::abs(currentBalance);
+            double value = calculateOverdraftCharge(absoluteValue);
+            cout << "Overdraft charge: " << value;
+            currentBalance = currentBalance - value;
+
+            ConfigurationList *newconfig = new ConfigurationList("data\\accounts\\" + account + ".txt");
+            config->GetBlock("account")->AddProperty("balance", to_string(currentBalance));
+        }    
+
+    }
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}    
     
 }
 
-double Administrator::calculateOverdraftCharge() {
-    // ... (implementation)
+double Administrator::calculateOverdraftCharge(double amount) {
+    const double chargingPercentage = 0.04;
+    double overdraftCharge = chargingPercentage*amount;
+    return overdraftCharge;
 }
 
-double Administrator::calculateAnnualInterest() {
-    // ... (implementation)
+void Administrator::calculateDailyInterest(string acc) {
+
+    // load data from files
+	ConfigurationList* config = new ConfigurationList("data\\accounts\\" + acc + ".txt");
+	try
+	{
+		config->LoadFromFile();
+		string amount = config->GetBlock("account")->GetPropertyValue("balance");
+		double currentBalance = std::stod(amount);
+
+        string interestRate = config->GetBlock("bank")->GetPropertyValue("annual_interest_rate");
+		annualInterestRate = std::stod(interestRate);
+
+        double dailyInterest = (annualInterestRate/365.0)*currentBalance;
+
+        cout << "\nToday Interest Percentage: " << dailyInterest;
+        currentBalance = currentBalance + dailyInterest;
+
+        ConfigurationList *newconfig = new ConfigurationList("data\\accounts\\" + acc + ".txt");
+        config->GetBlock("account")->AddProperty("balance", to_string(currentBalance));
+
+        cout << "Interest was added to the account" << endl; 
+
+    }
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}   
 }
+	
+
+
+
 
