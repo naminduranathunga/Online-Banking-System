@@ -13,7 +13,7 @@ using namespace std;
 void Account::load(long account_no)
 {
     // Load account details from a file
-    ifstream file(account_no + ".txt");
+    ifstream file(to_string(account_no) + ".txt");
     if (file.is_open()) 
     {
         file >> account_no >> balance;
