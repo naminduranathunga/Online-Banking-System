@@ -1,0 +1,15 @@
+[user]
+username=customer001.txt
+password=Password@1234
+type=3
+#customer
+
+[account]
+account_no=234673
+account_type=2
+#savings account
+
+[account]
+account_no=346335
+account_type=1
+#savings account

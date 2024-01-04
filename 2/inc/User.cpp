@@ -1,4 +1,5 @@
 #include "User.h"
+#include "Customer.h"
 #include "../lib/ConfigurationList.h"
 
 User::User(const string& uname, const string& pwd, int t)
@@ -29,6 +30,9 @@ User* User::fromFile(string filename) {
     int type = stoi(config->GetBlock("user")->GetPropertyValue("type"));
 
     //Create user according to the type
+    if (type == User::UserType::CUSTOMER){
+        return new Customer(username, password, type, config);
+    }
 
     return new User(username, password, type);
 }
@@ -46,6 +50,6 @@ void User::save() {
 
 // Namindu
 void User::menu() {
-    std::cout << "Welcome " << this->username << endl;
+    std::cout << "Welcome " << this->username << "  Type:" << this->type <<endl;
     system("pause");
 }

@@ -6,15 +6,16 @@
  * \date   January 2024
  *********************************************************************/
 
-#pragma once
+#ifndef BANKINGSYSTEM_H
+#define BANKINGSYSTEM_H
 
 #include <iostream>
 #include <string>
 
-#include "Account.h"
 #include "User.h"
 #include "../lib/ConfigurationList.h"
 
+class Account;
 
 class BankingSystem{
 public:
@@ -23,8 +24,8 @@ public:
 	 */
 	User* currentUser = nullptr;
 	Account* BankOwnAccount = nullptr;
-	static int date;
-	static float annualInterestRate;
+	int date;
+	float annualInterestRate;
 
 	/**
 	* Methods.
@@ -49,3 +50,5 @@ public:
 	};
 
 };
+
+#endif // !BANKINGSYSTEM_H

@@ -23,7 +23,7 @@ public:
     void setAnnualInterest(double interestRate);
 
 private:
-    void checkOverdrafts(const vector<Account>& savingsAccounts);
+    void checkOverdrafts(const vector<Account>& savingsAccounts){};
 
     double calculateOverdraftCharge(double overdraftAmount) const;
 };

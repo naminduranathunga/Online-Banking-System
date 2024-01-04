@@ -144,3 +144,12 @@ int Customer::AskUserToSelectAccount() {
     
     return -1;
 }
+
+
+void Customer::addAccount(Account* account) {
+    
+}
+
+void save() {
+    
+}

@@ -25,6 +25,12 @@
 },
 {
   "directory": "C:/Users/Namindu/source/repos/Online-Banking-System/2/build",
+  "command": "D:\\Dev-Cpp\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\SavingsAccount.cpp.obj -c C:\\Users\\Namindu\\source\\repos\\Online-Banking-System\\2\\inc\\SavingsAccount.cpp",
+  "file": "C:/Users/Namindu/source/repos/Online-Banking-System/2/inc/SavingsAccount.cpp",
+  "output": "CMakeFiles/BankingSystem.dir/inc/SavingsAccount.cpp.obj"
+},
+{
+  "directory": "C:/Users/Namindu/source/repos/Online-Banking-System/2/build",
   "command": "D:\\Dev-Cpp\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\User.cpp.obj -c C:\\Users\\Namindu\\source\\repos\\Online-Banking-System\\2\\inc\\User.cpp",
   "file": "C:/Users/Namindu/source/repos/Online-Banking-System/2/inc/User.cpp",
   "output": "CMakeFiles/BankingSystem.dir/inc/User.cpp.obj"

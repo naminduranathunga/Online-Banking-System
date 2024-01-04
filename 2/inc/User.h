@@ -1,3 +1,7 @@
+#ifndef USER_H
+#define USER_H 1
+
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -42,4 +46,4 @@ private:
     int type;
 };
 
-
+#endif // !USER_H

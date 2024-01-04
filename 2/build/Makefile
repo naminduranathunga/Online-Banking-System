@@ -224,6 +224,30 @@ inc/Customer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Customer.cpp.s
 .PHONY : inc/Customer.cpp.s
 
+inc/SavingsAccount.obj: inc/SavingsAccount.cpp.obj
+.PHONY : inc/SavingsAccount.obj
+
+# target to build an object file
+inc/SavingsAccount.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/SavingsAccount.cpp.obj
+.PHONY : inc/SavingsAccount.cpp.obj
+
+inc/SavingsAccount.i: inc/SavingsAccount.cpp.i
+.PHONY : inc/SavingsAccount.i
+
+# target to preprocess a source file
+inc/SavingsAccount.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/SavingsAccount.cpp.i
+.PHONY : inc/SavingsAccount.cpp.i
+
+inc/SavingsAccount.s: inc/SavingsAccount.cpp.s
+.PHONY : inc/SavingsAccount.s
+
+# target to generate assembly for a file
+inc/SavingsAccount.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/SavingsAccount.cpp.s
+.PHONY : inc/SavingsAccount.cpp.s
+
 inc/User.obj: inc/User.cpp.obj
 .PHONY : inc/User.obj
 
@@ -341,6 +365,9 @@ help:
 	@echo ... inc/Customer.obj
 	@echo ... inc/Customer.i
 	@echo ... inc/Customer.s
+	@echo ... inc/SavingsAccount.obj
+	@echo ... inc/SavingsAccount.i
+	@echo ... inc/SavingsAccount.s
 	@echo ... inc/User.obj
 	@echo ... inc/User.i
 	@echo ... inc/User.s
