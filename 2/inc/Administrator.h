@@ -8,12 +8,13 @@
 
 #include <iostream>
 #include "../lib/ConfigurationList.h"
+#include "User.h"
 #include <cmath>
 
 using namespace std;
 
 
-class Administrator {
+class Administrator : public User{
 public:
 
     double annualInterestRate;
@@ -31,5 +32,7 @@ public:
     double calculateOverdraftCharge();
 
     double calculateAnnualInterest();
+
+    void save() override;
 };
 
