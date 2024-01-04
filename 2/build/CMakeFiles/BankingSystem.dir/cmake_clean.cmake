@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe"
-  "C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.exe.manifest"
-  "C:/Users/Namindu/source/repos/Online-Banking-System/2/BankingSystem.pdb"
+  "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/BankingSystem.exe"
+  "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/BankingSystem.exe.manifest"
+  "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/BankingSystem.pdb"
   "CMakeFiles/BankingSystem.dir/inc/Account.cpp.obj"
   "CMakeFiles/BankingSystem.dir/inc/Account.cpp.obj.d"
   "CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.obj"
