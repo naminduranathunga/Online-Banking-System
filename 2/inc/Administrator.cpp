@@ -15,6 +15,46 @@ using namespace std;
 
 Administrator::Administrator() : User(username, password, type){}
 
+void Administrator::menu() {
+    bool loop = true;
+    while (loop){
+        system("cls");
+        cout << "=============================================="<<endl;
+        cout << "Welcome " << this->getUsername() << endl;
+        cout << "=============================================="<<endl;
+        cout << endl;
+        cout << "1. Add Employee" << endl;
+        cout << "2. Increase date by 1" << endl;
+        cout << "3. Set annual interest rate" << endl;
+        cout << "4. Logout" << endl;
+
+        int choice;
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+        case 1:
+            addEmployee();
+            break;
+        case 2:
+            increaseDateByOne();
+            break;
+        case 3:
+            setAnnualInterest();
+            break;
+        case 4:
+            cout << "Thanks for using our system" << endl;
+            loop = false; // exit the loop
+            break;
+        default:
+            cout << "Invalid choice" << endl;
+            break;
+        }
+        system("pause");
+    }
+
+}
+
 void Administrator::addEmployee() {
     // Get employee details
     std::string name, contactNumber;

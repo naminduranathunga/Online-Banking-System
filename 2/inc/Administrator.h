@@ -21,6 +21,9 @@ public:
     int day;
 
     Administrator();
+
+    void menu() override;
+    
     void addEmployee();
 
     void increaseDateByOne();
