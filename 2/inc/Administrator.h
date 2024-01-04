@@ -1,8 +1,14 @@
+/*****************************************************************//**
+ * \file   Administrator.h
+ * \brief
+ *
+ * \author Rashmi
+ * \date   January 2024
+ *********************************************************************/
 
 #include <iostream>
-#include <vector>
+#include "../lib/ConfigurationList.h"
 #include <cmath>
-//#include "System.h"
 
 using namespace std;
 
@@ -10,22 +16,23 @@ class Account {
 public:
     string accountNumber;
     double balance;
-
-    Account(const std::string& accNum);
 };
 
 class Administrator {
 public:
-    void addEmployee(const string& employeeName);
+    Administrator();
+    void addEmployee(string employeeName);
 
-    void increaseDateByOne(vector<Account>& savingsAccounts);
+    void increaseDateByOne(Account &savingsAccounts);
 
-    void setAnnualInterest(double interestRate);
+    void setAnnualInterest();
 
-private:
-    void checkOverdrafts(const vector<Account>& savingsAccounts);
+    void checkOverdrafts(Account &savingsAccounts);
 
-    double calculateOverdraftCharge(double overdraftAmount) const;
+    double calculateOverdraftCharge(double overdraftAmount);
+
+    double calculateAnnualInterest();
 };
+
 
 
