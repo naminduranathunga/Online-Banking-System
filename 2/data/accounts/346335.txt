@@ -1,4 +1,4 @@
 [account]
 username=Blob
 account_type=2
-balance=1050.000000
+balance=850.000000

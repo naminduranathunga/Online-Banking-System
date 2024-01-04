@@ -1,5 +1,5 @@
 [user]
-username=customer001.txt
+username=customer001
 password=Password@1234
 type=3
 #customer

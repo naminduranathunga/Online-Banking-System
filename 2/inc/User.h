@@ -35,12 +35,12 @@ public:
     static User* fromFile(string filename);
 
     // Namindu
-    void save();
+    virtual void save();
 
     // Namindu
     virtual void menu();
 
-private:
+protected:
     string username;
     string password;
     int type;
