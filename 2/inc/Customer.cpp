@@ -13,19 +13,6 @@ Customer::Customer(const string& username, const string& password, int type, Con
         for (int i = 0; i < blocks.size(); i++) {
             PropertyBlock* block = blocks[i];
             if (block->GetName() == "account") {
-                /*
-                Add to accounts vector
-
-                string accountNumber = block->GetProperty("accountNumber");
-                string accountType = block->GetProperty("accountType");
-                string balance = block->GetProperty("balance");
-                string interestRate = block->GetProperty("interestRate");
-                string interestType = block->GetProperty("interestType");
-                string dateCreated = block->GetProperty("dateCreated");
-                string status = block->GetProperty("status");
-
-                Account* account = new Account(accountNumber, accountType, balance, interestRate, interestType, dateCreated, status);
-                this->accounts.push_back(account);*/
                 string accountNumber = block->GetPropertyValue("account_no");
                 this->accounts.push_back(Account::fromFromFile(stol(accountNumber)));
             }
@@ -153,7 +140,7 @@ int Customer::AskUserToSelectAccount() {
         cin >> choice;
 
         if (choice == 0) return -1; // exit
-        
+
         choice--; // decrement by 1 to match the index
         if (choice < 0 || choice >= this->accounts.size()) {
             cout << "Invalid choice" << endl;
