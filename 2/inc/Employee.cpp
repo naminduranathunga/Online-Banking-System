@@ -38,16 +38,14 @@ void Employee::addcustomer()
     // Display the generated username
     cout << "Username: " << username << endl;
 
-    // Set the generated username and common password in the customer object
-    customer.setUsername(username);
-    customer.setPassword(password);
-
     // Save customer details to a file
     ofstream customerFile(username + ".txt");
     if (customerFile.is_open())
     {
+        customerFile << "[" << username << "]" << endl;
         customerFile << "Name: " << customer_name << endl;
         customerFile << "Mobile Number: " << mobile_no << endl;
+        customerFile << "Password: " << password << endl;
         // Add more customer details as needed
         customerFile.close();
     }
