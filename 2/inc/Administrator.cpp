@@ -13,7 +13,9 @@
 
 using namespace std;
 
-Administrator::Administrator() : User(username, password, type){}
+Administrator::Administrator(const string& username, const string& password, int type, ConfigurationList* config) : User(username, password, type){
+    // do nothing - Changed by Namindu
+}
 
 void Administrator::menu() {
     bool loop = true;
@@ -75,10 +77,10 @@ void Administrator::addEmployee() {
         string username = "employee" + to_string(employeeCount + 1);
         string password = "Password@123";
 
-        ConfigurationList* config = new ConfigurationList("data/users/" + this->username + ".txt");
+        ConfigurationList* config = new ConfigurationList("data/users/" + username + ".txt");
         config->AddBlock("user");
-        config->GetBlock("user")->AddProperty("username", this->username);
-        config->GetBlock("user")->AddProperty("password", this->password);
+        config->GetBlock("user")->AddProperty("username", username);
+        config->GetBlock("user")->AddProperty("password", password);
         config->GetBlock("user")->AddProperty("type", "employee");
         config->SaveToFile();
 

@@ -1,56 +1,56 @@
 [
 {
-  "directory": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/build",
-  "command": "E:\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\Account.cpp.obj -c \"C:\\Users\\Rashmi Kavindya\\Desktop\\Online-Banking-System\\2\\inc\\Account.cpp\"",
-  "file": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/inc/Account.cpp",
+  "directory": "C:/Users/Namindu/source/repos/Online-Banking-System/2/build",
+  "command": "D:\\Dev-Cpp\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\Account.cpp.obj -c C:\\Users\\Namindu\\source\\repos\\Online-Banking-System\\2\\inc\\Account.cpp",
+  "file": "C:/Users/Namindu/source/repos/Online-Banking-System/2/inc/Account.cpp",
   "output": "CMakeFiles/BankingSystem.dir/inc/Account.cpp.obj"
 },
 {
-  "directory": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/build",
-  "command": "E:\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\Administrator.cpp.obj -c \"C:\\Users\\Rashmi Kavindya\\Desktop\\Online-Banking-System\\2\\inc\\Administrator.cpp\"",
-  "file": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/inc/Administrator.cpp",
+  "directory": "C:/Users/Namindu/source/repos/Online-Banking-System/2/build",
+  "command": "D:\\Dev-Cpp\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\Administrator.cpp.obj -c C:\\Users\\Namindu\\source\\repos\\Online-Banking-System\\2\\inc\\Administrator.cpp",
+  "file": "C:/Users/Namindu/source/repos/Online-Banking-System/2/inc/Administrator.cpp",
   "output": "CMakeFiles/BankingSystem.dir/inc/Administrator.cpp.obj"
 },
 {
-  "directory": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/build",
-  "command": "E:\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\BankingSystem.cpp.obj -c \"C:\\Users\\Rashmi Kavindya\\Desktop\\Online-Banking-System\\2\\inc\\BankingSystem.cpp\"",
-  "file": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/inc/BankingSystem.cpp",
+  "directory": "C:/Users/Namindu/source/repos/Online-Banking-System/2/build",
+  "command": "D:\\Dev-Cpp\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\BankingSystem.cpp.obj -c C:\\Users\\Namindu\\source\\repos\\Online-Banking-System\\2\\inc\\BankingSystem.cpp",
+  "file": "C:/Users/Namindu/source/repos/Online-Banking-System/2/inc/BankingSystem.cpp",
   "output": "CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.obj"
 },
 {
-  "directory": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/build",
-  "command": "E:\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\Customer.cpp.obj -c \"C:\\Users\\Rashmi Kavindya\\Desktop\\Online-Banking-System\\2\\inc\\Customer.cpp\"",
-  "file": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/inc/Customer.cpp",
+  "directory": "C:/Users/Namindu/source/repos/Online-Banking-System/2/build",
+  "command": "D:\\Dev-Cpp\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\Customer.cpp.obj -c C:\\Users\\Namindu\\source\\repos\\Online-Banking-System\\2\\inc\\Customer.cpp",
+  "file": "C:/Users/Namindu/source/repos/Online-Banking-System/2/inc/Customer.cpp",
   "output": "CMakeFiles/BankingSystem.dir/inc/Customer.cpp.obj"
 },
 {
-  "directory": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/build",
-  "command": "E:\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\SavingsAccount.cpp.obj -c \"C:\\Users\\Rashmi Kavindya\\Desktop\\Online-Banking-System\\2\\inc\\SavingsAccount.cpp\"",
-  "file": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/inc/SavingsAccount.cpp",
+  "directory": "C:/Users/Namindu/source/repos/Online-Banking-System/2/build",
+  "command": "D:\\Dev-Cpp\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\SavingsAccount.cpp.obj -c C:\\Users\\Namindu\\source\\repos\\Online-Banking-System\\2\\inc\\SavingsAccount.cpp",
+  "file": "C:/Users/Namindu/source/repos/Online-Banking-System/2/inc/SavingsAccount.cpp",
   "output": "CMakeFiles/BankingSystem.dir/inc/SavingsAccount.cpp.obj"
 },
 {
-  "directory": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/build",
-  "command": "E:\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\User.cpp.obj -c \"C:\\Users\\Rashmi Kavindya\\Desktop\\Online-Banking-System\\2\\inc\\User.cpp\"",
-  "file": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/inc/User.cpp",
+  "directory": "C:/Users/Namindu/source/repos/Online-Banking-System/2/build",
+  "command": "D:\\Dev-Cpp\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\inc\\User.cpp.obj -c C:\\Users\\Namindu\\source\\repos\\Online-Banking-System\\2\\inc\\User.cpp",
+  "file": "C:/Users/Namindu/source/repos/Online-Banking-System/2/inc/User.cpp",
   "output": "CMakeFiles/BankingSystem.dir/inc/User.cpp.obj"
 },
 {
-  "directory": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/build",
-  "command": "E:\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\lib\\ConfigurationList.cpp.obj -c \"C:\\Users\\Rashmi Kavindya\\Desktop\\Online-Banking-System\\2\\lib\\ConfigurationList.cpp\"",
-  "file": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/lib/ConfigurationList.cpp",
+  "directory": "C:/Users/Namindu/source/repos/Online-Banking-System/2/build",
+  "command": "D:\\Dev-Cpp\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\lib\\ConfigurationList.cpp.obj -c C:\\Users\\Namindu\\source\\repos\\Online-Banking-System\\2\\lib\\ConfigurationList.cpp",
+  "file": "C:/Users/Namindu/source/repos/Online-Banking-System/2/lib/ConfigurationList.cpp",
   "output": "CMakeFiles/BankingSystem.dir/lib/ConfigurationList.cpp.obj"
 },
 {
-  "directory": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/build",
-  "command": "E:\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\lib\\PropertyBlock.cpp.obj -c \"C:\\Users\\Rashmi Kavindya\\Desktop\\Online-Banking-System\\2\\lib\\PropertyBlock.cpp\"",
-  "file": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/lib/PropertyBlock.cpp",
+  "directory": "C:/Users/Namindu/source/repos/Online-Banking-System/2/build",
+  "command": "D:\\Dev-Cpp\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\lib\\PropertyBlock.cpp.obj -c C:\\Users\\Namindu\\source\\repos\\Online-Banking-System\\2\\lib\\PropertyBlock.cpp",
+  "file": "C:/Users/Namindu/source/repos/Online-Banking-System/2/lib/PropertyBlock.cpp",
   "output": "CMakeFiles/BankingSystem.dir/lib/PropertyBlock.cpp.obj"
 },
 {
-  "directory": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/build",
-  "command": "E:\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\main.cpp.obj -c \"C:\\Users\\Rashmi Kavindya\\Desktop\\Online-Banking-System\\2\\main.cpp\"",
-  "file": "C:/Users/Rashmi Kavindya/Desktop/Online-Banking-System/2/main.cpp",
+  "directory": "C:/Users/Namindu/source/repos/Online-Banking-System/2/build",
+  "command": "D:\\Dev-Cpp\\MinGW64\\bin\\g++.exe   -g -o CMakeFiles\\BankingSystem.dir\\main.cpp.obj -c C:\\Users\\Namindu\\source\\repos\\Online-Banking-System\\2\\main.cpp",
+  "file": "C:/Users/Namindu/source/repos/Online-Banking-System/2/main.cpp",
   "output": "CMakeFiles/BankingSystem.dir/main.cpp.obj"
 }
 ]
