@@ -143,7 +143,8 @@ int Customer::AskUserToSelectAccount() {
         cout << (account->account_type == Account::AccountType::Savings?"Savings":account->account_type == Account::AccountType::Current?"Current":"Other");
         cout << " --- Account No.:" << account->getAccountNo() << "  --- Balance:" << account->getBalance() << endl;
     }
-    
+    cout << 0 << ". " << "Back" << endl;
+
     int max_tries = 3;
     int tries = 0;
     while (tries < max_tries) {
@@ -151,6 +152,8 @@ int Customer::AskUserToSelectAccount() {
         cout << "Enter your choice: ";
         cin >> choice;
 
+        if (choice == 0) return -1; // exit
+        
         choice--; // decrement by 1 to match the index
         if (choice < 0 || choice >= this->accounts.size()) {
             cout << "Invalid choice" << endl;
