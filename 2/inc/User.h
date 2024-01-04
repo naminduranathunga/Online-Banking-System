@@ -11,6 +11,9 @@ using namespace std;
 #define USER_TYPE_BANK_EMPLOYEE 2
 #define USER_TYPE_CUSTOMER 3
 
+//Namindu
+class BankingSystem;
+
 class User {
 public:
     /**
@@ -22,6 +25,7 @@ public:
         static const int BANK_EMPLOYEE = 2;
         static const int CUSTOMER = 3;
     };
+    BankingSystem* system_ref;
 
     User(const string& username, const string& password, int type);
 
