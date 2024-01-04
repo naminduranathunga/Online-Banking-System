@@ -20,7 +20,7 @@ public:
     double annualInterestRate;
     int day;
 
-    Administrator();
+    Administrator(const string& username, const string& password, int type, ConfigurationList* config = nullptr);
 
     void menu() override;
     

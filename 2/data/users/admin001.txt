@@ -2,4 +2,3 @@
 username=admin001
 password=Password@1234
 type=1
-#administrator
