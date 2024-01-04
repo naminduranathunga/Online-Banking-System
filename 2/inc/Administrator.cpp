@@ -7,66 +7,66 @@
  *********************************************************************/
 
 #include "Administrator.h"
-#include <fstream>
+#include <string>
 
 using namespace std;
 
-Administrator::Administrator(){}
+Administrator::Administrator(){
+	
+	// load data from files
+	ConfigurationList* config = new ConfigurationList("..\\data\\bankconfig.txt");
+	try
+	{
+		config->LoadFromFile();
+		string interestRate = config->GetBlock("bank")->GetPropertyValue("annual_interest_rate");
+		string date = config->GetBlock("bank")->GetPropertyValue("day");
+		annualInterestRate = std::stod(interestRate);
+		day = std::stoi(date);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+}
 
 void Administrator::addEmployee(string employeeName) {
     // ... (get employee details)
 	cout << "Employee added: " << employeeName << endl;
 }
 
-void Administrator::increaseDateByOne(Account &savingsAccount) {
+void Administrator::increaseDateByOne() {
     // increase the date by 1 day
-    
+	day += 1;
 
     // Calculate daily interest for savings accounts
-    double dailyInterest = (calculateAnnualInterest() / 365.0) * savingsAccount.balance;
-    savingsAccount.balance += dailyInterest;
+    double dailyInterest = (calculateAnnualInterest() / 365.0)   ;
+    //savingsAccount.balance += dailyInterest;
 
     // Check overdrafts and add overdraft charge
-    checkOverdrafts(savingsAccount);
+    checkOverdrafts();
 }
 
 void Administrator::setAnnualInterest() {
 	char adminChoice;
-	double interestRate;
-	cout << "Do you want to change the Annual Interest rate? (y/n): ";
+	double annualInterestRate  ;
+
+	cout << "Do you want to change the Annual Interest rate " << annualInterestRate << "? (y/n): ";
 	cin >> adminChoice;
 	if(adminChoice == 'y') {
 		cout << "Enter the Annual Interest rate: ";
-		cin >> interestRate;
+		cin >> annualInterestRate;
 
-        // Open the file for writing
-        ofstream outFile("annual_interest_rate.txt");
 
-        // Check if the file is open
-        if (outFile.is_open()) {
-            // Write the new interest rate to the file
-            outFile << interestRate;
-
-            // Close the file
-            outFile.close();
-
-            cout << "Annual interest rate set to: " << interestRate << "%" << endl;
-
-        } else {
-            cerr << "Error opening the file for writing." << endl;
-        }
     }
 }
 
 
-void Administrator::checkOverdrafts(Account &savingsAccount) {
+void Administrator::checkOverdrafts() {
     // ... (implementation)
-	if (savingsAccount.balance < 0) {
-        double overdraftCharge = calculateOverdraftCharge(savingsAccount.balance);
-        savingsAccount.balance -= overdraftCharge;
-        cout << "Overdraft charge added to account " << savingsAccount.accountNumber
-             << ": " << overdraftCharge << endl;
-    }
+	
+        cout << "Overdraft charge added to account " << endl;
+    
 }
 
 double Administrator::calculateOverdraftCharge(double overdraftAmount) {

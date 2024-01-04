@@ -12,22 +12,20 @@
 
 using namespace std;
 
-class Account {
-public:
-    string accountNumber;
-    double balance;
-};
 
 class Administrator {
 public:
+    int day;
+    double annualInterestRate;
+    
     Administrator();
     void addEmployee(string employeeName);
 
-    void increaseDateByOne(Account &savingsAccounts);
+    void increaseDateByOne();
 
     void setAnnualInterest();
 
-    void checkOverdrafts(Account &savingsAccounts);
+    void checkOverdrafts();
 
     double calculateOverdraftCharge(double overdraftAmount);
 
