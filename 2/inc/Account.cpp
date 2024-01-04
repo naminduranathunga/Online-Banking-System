@@ -107,10 +107,19 @@ void Account::deposit(string text, float amount, int day)
     
     // Print a message about the deposit
     cout << "Date:" << day << "    ";
-    cout << "Amount" << amount << "    ";
-    cout << "Transaction" << text << "    ";
-    cout << "Balance" << balance << "    ";
+    cout << "Amount:" << amount << "    ";
+    cout << "Transaction:" << text << "    ";
+    cout << "Balance:" << balance << "    ";
     cout << endl;
+
+    //append to transaction history
+    ofstream file("data\\transactions\\" + to_string(account_no) + ".txt", ios::app);
+    file << "Date:" << day << "    ";
+    file << "Amount:" << amount << "    ";
+    file << "Transaction:" << text << "    ";
+    file << "Balance:" << balance << "    ";
+    file << endl;
+    file.close();
     
     // Save the updated account information to a file
     save();
@@ -126,10 +135,19 @@ void Account::withdraw(string text, float amount, int day)
     
         // Print a message about the deposit
         cout << "Date:" << day << "    ";
-        cout << "Amount" << amount << "    ";
-        cout << "Transaction" << text << "    ";
-        cout << "Balance" << balance << "    ";
+        cout << "Amount:" << amount << "    ";
+        cout << "Transaction:" << text << "    ";
+        cout << "Balance:" << balance << "    ";
         cout << endl;
+
+        //append to transaction history
+        ofstream file("data\\transactions\\" + to_string(account_no) + ".txt", ios::app);
+        file << "Date:" << day << "    ";
+        file << "Amount:" << amount << "    ";
+        file << "Transaction:" << text << "    ";
+        file << "Balance:" << balance << "    ";
+        file << endl;
+        file.close();
     
         // Save the updated account information to a file
         save();
@@ -140,14 +158,17 @@ void Account::withdraw(string text, float amount, int day)
 void Account::showTransactions()
 {
     // Print the account information
+    system("cls");
+    cout << "===========================================" << endl;
     cout << "Account Number: " << account_no << endl;
     cout << "Username: " << username << endl;
     cout << "Account Type: " << account_type << endl;
     cout << "Balance: " << balance << endl;
+    cout << "===========================================" << endl;
     cout << endl;
     
     // Print the transaction history
-    ifstream file("data\\accounts\\" + to_string(account_no) + ".txt");
+    ifstream file("data\\transactions\\" + to_string(account_no) + ".txt");
     string line;
     while (getline(file, line))
     {
