@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/BankingSystem.dir/inc/BankingSystem.cpp.obj.d"
   "CMakeFiles/BankingSystem.dir/inc/Customer.cpp.obj"
   "CMakeFiles/BankingSystem.dir/inc/Customer.cpp.obj.d"
+  "CMakeFiles/BankingSystem.dir/inc/Employee.cpp.obj"
+  "CMakeFiles/BankingSystem.dir/inc/Employee.cpp.obj.d"
   "CMakeFiles/BankingSystem.dir/inc/SavingsAccount.cpp.obj"
   "CMakeFiles/BankingSystem.dir/inc/SavingsAccount.cpp.obj.d"
   "CMakeFiles/BankingSystem.dir/inc/User.cpp.obj"

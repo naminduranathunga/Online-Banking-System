@@ -1,5 +1,6 @@
 #include "User.h"
 #include "Customer.h"
+#include "Employee.h"
 #include "Administrator.h"
 #include "../lib/ConfigurationList.h"
 
@@ -35,7 +36,7 @@ User* User::fromFile(string filename) {
     if (type == User::UserType::CUSTOMER){
         return new Customer(username, password, type, config);
     } else if (type == User::UserType::BANK_EMPLOYEE){
-        //return new Employee(username, password, type);
+        return new Employee(username, password, type);
     } else if (type == User::UserType::ADMINISTRATOR){
         return new Administrator(username, password, type);
     }
