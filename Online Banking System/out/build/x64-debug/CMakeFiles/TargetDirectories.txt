@@ -1,3 +1,0 @@
-C:/Users/Namindu/source/repos/Online-Banking-System/Online Banking System/out/build/x64-debug/CMakeFiles/CMakeTarget.dir
-C:/Users/Namindu/source/repos/Online-Banking-System/Online Banking System/out/build/x64-debug/CMakeFiles/edit_cache.dir
-C:/Users/Namindu/source/repos/Online-Banking-System/Online Banking System/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
