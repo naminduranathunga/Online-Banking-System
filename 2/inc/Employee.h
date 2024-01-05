@@ -8,9 +8,13 @@
 
 #include <iostream>
 #include <string>
+#include "User.h"
+#include "Account.h"
+#include "../lib/ConfigurationLoaderLib.h"
+
 using namespace std;
 
-class Employee
+class Employee : public User
 {
     private:
     long account_no;
@@ -21,6 +25,8 @@ class Employee
     float amount;
 
     public:
+    Employee(const string& username, const string& password, int type, ConfigurationList* config = nullptr);
+    void menu() override;
     void addcustomer();
     void createaccount();
     void closeaccount();

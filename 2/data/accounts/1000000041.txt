@@ -1,0 +1,4 @@
+[account]
+username=customer002
+account_type=1
+balance=0.000000

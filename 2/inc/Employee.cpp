@@ -6,6 +6,7 @@
  * \date   January 2024
  *********************************************************************/
 
+#include "BankingSystem.h"
 #include "Employee.h"
 #include "Account.h"
 #include "Customer.h"
@@ -17,76 +18,164 @@ using namespace std;
 
 int customerCounter = 1;
 
+Employee::Employee(const string& username, const string& password, int type, ConfigurationList* config) 
+: User(username, password, type)
+{
+    // do nothing
+}
+
+void Employee::menu()
+{
+    bool loop = true;
+    while (loop)
+    {
+        system("cls");
+        cout << "==============================================" << endl;
+        cout << "Welcome " << this->getUsername() << endl;
+        cout << "==============================================" << endl;
+        cout << endl;
+        cout << "1. Add Customer" << endl;
+        cout << "2. Create Account" << endl;
+        cout << "3. Close Account" << endl;
+        cout << "4. Deposit Money" << endl;
+        cout << "5. Withdraw Money" << endl;
+        cout << "6. View Account" << endl;
+        cout << "7. Logout" << endl;
+
+        int choice;
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            addcustomer();
+            break;
+        case 2:
+            createaccount();
+            break;
+        case 3:
+            closeaccount();
+            break;
+        case 4:
+            depositmoney();
+            break;
+        case 5:
+            withdrawmoney();
+            break;
+        case 6:
+            viewaccount();
+            break;
+        case 7:
+            cout << "Thanks for using our system" << endl;
+            loop = false; // exit the loop
+            break;
+        default:
+            cout << "Invalid choice" << endl;
+            break;
+        }
+        system("pause");
+    }
+}
+
 void Employee::addcustomer()
 {
-    Customer customer;
+    string customer_name, mobile_no, username, password;
 
     cout << "Enter customer details:" << endl;
     cout << "Name: ";
     cin >> customer_name;
+    cout << endl;
+
+    //ask username
+    cout << "Enter a username: ";
+    cin >> username;
+    cout << endl;
     
     cout << "Mobile Number: ";
     cin >> mobile_no;
+    cout << endl;
 
-    // Generate a username based on the counter
-    string username = "customer" + to_string(customerCounter);
-    customerCounter++;
+    cout << "Password: ";
+    cin >> password;
+    cout << endl;
 
-    // Set a common password
-    string password = "Password@1234";
+    // Check if the username is already taken
+    User* user = nullptr;
+    try{
+        user = User::fromFile(username);
+        cout << "Username already taken." << endl;
 
-    // Display the generated username
-    cout << "Username: " << username << endl;
+    }catch (const char* msg){
+        // Create a new customer
+        user = new Customer(username, password, User::UserType::CUSTOMER);
+        user->save();
+        
+        cout << "Customer created successfully." << endl;
 
-    // Set the generated username and common password in the customer object
-    customer.setUsername(username);
-    customer.setPassword(password);
-
-    // Save customer details to a file
-    ofstream customerFile(username + ".txt");
-    if (customerFile.is_open())
-    {
-        customerFile << "Name: " << customer_name << endl;
-        customerFile << "Mobile Number: " << mobile_no << endl;
-        // Add more customer details as needed
-        customerFile.close();
+    }catch(...){
+        cout << "Error creating customer." << endl;
     }
-    else
-    {
-        cerr << "Error creating customer file." << endl;
-    }
+
 }
 
 void Employee::createaccount()
 {
     int accountType;
-    
-    cout << "Select account type (1 - Saving, 2 - Current): ";
-    cin >> accountType;
+    string customer_username;
 
-    if (accountType == 1 || accountType == 2)
+    cout << "Enter customer's username: ";
+    cin >> customer_username;
+
+    // Check if the customer exists
+    try
     {
-        // Generate a random account number
-        long accountNumber = rand() % 9000000000 + 1000000000;
+        cout << customer_username << endl;
+        User* user = User::fromFile("data\\users\\" + customer_username + ".txt");
+        if (user->getType() != User::UserType::CUSTOMER){
+            cout << "User is not a customer." << endl;
+            return;
+        }
 
-        if (accountType == 1)
+        cout << "Select account type (1 - Saving, 2 - Current): ";
+        cin >> accountType;
+
+        if (accountType == 1 || accountType == 2)
         {
-            // Create a Savings account
-            // You can implement logic to create a Savings account using the Account class
-            // For example: Account::createSavings(accountNumber);
+            // Generate a random account number
+            long accountNumber = rand() % 9000000000 + 1000000000;
+            Account* account = nullptr;
+            if (accountType == 1)
+            {
+                // Create a Savings account
+                account = new Account(accountNumber, customer_username, Account::AccountType::Savings, 0);
+            }
+            else
+            {
+                // Create a Current account
+                account = new Account(accountNumber, customer_username, Account::AccountType::Current, 0);
+            }
+            account->save();
+
+            Customer* customer = (Customer*)user;
+            customer->addAccount(account);
+            customer->save();
+
+            delete account;
+
+            cout << "Account created successfully. Account Number: " << accountNumber << endl;
         }
         else
         {
-            // Create a Current account
-            // You can implement logic to create a Current account using the Account class
-            // For example: Account::createCurrent(accountNumber);
+            cout << "Invalid account type selected." << endl;
         }
 
-        cout << "Account created successfully. Account Number: " << accountNumber << endl;
+        delete user;
     }
-    else
-    {
-        cout << "Invalid account type selected." << endl;
+    catch(const char* msg){
+        cout << msg << endl;
+    }catch(...){
+        cout << "Error creating account." << endl;
     }
 }
 
@@ -104,13 +193,31 @@ void Employee::depositmoney()
     cout << "Enter the account number: ";
     cin >> account_no;
 
-    cout << "Enter the deposit amount: ";
-    cin >> depositamount;
+    try
+    {
+        Account* account = Account::fromFromFile(account_no);
 
-    cout << "Enter the date: ";
-    cin >> date;
+        cout << "Enter the deposit amount: ";
+        cin >> depositamount;
 
-    Account::deposit("Deposit", depositamount, date);
+        cout << "Enter the date: (-1 for current date)";
+        cin >> date;
+
+        if (date == -1)
+        {
+            date = this->system_ref->date;
+        }
+
+        account->deposit("Deposit", depositamount, date);
+
+    }
+    catch(const char* e)
+    {
+        // account does not exist
+        cout << e << endl;
+        return;
+    }
+
 }
 
 void Employee::withdrawmoney()
@@ -122,16 +229,51 @@ void Employee::withdrawmoney()
     cout << "Enter the account number: ";
     cin >> account_no;
 
-    cout << "Enter the withdrawal amount: ";
-    cin >> withdrawalamount;
+    try
+    {
+        Account* account = Account::fromFromFile(account_no);
 
-    cout << "Enter the date:";
-    cin >> date;
+        cout << "Enter the withdraw amount: ";
+        cin >> withdrawalamount;
 
-    Account::withdraw("Withdraw", withdrawalamount, date);
+        cout << "Enter the date: (-1 for current date)";
+        cin >> date;
+
+        if (date == -1)
+        {
+            date = this->system_ref->date;
+        }
+
+        account->withdraw("Deposit", withdrawalamount, date);
+
+    }
+    catch(const char* e)
+    {
+        // account does not exist
+        cout << e << endl;
+        return;
+    }
+
 }
 
 void Employee::viewaccount()
 {
+    long account_no;
+    float withdrawalamount;
+    int date;
 
+    cout << "Enter the account number: ";
+    cin >> account_no;
+
+    try
+    {
+        Account* account = Account::fromFromFile(account_no);
+        account->showTransactions();
+    }
+    catch(const char* e)
+    {
+        // account does not exist
+        cout << e << endl;
+        return;
+    }
 }

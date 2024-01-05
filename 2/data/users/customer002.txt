@@ -1,0 +1,8 @@
+[user]
+username=customer002
+password=Password@1234
+type=3
+
+[account]
+account_no=1000000041
+account_type=1
