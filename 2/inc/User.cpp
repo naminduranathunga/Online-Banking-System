@@ -1,3 +1,11 @@
+/*****************************************************************//**
+ * \file   User.cpp
+ * \brief
+ *
+ * \author Rashmi
+ * \date   January 2024
+ *********************************************************************/
+
 #include "User.h"
 #include "Customer.h"
 #include "Employee.h"
