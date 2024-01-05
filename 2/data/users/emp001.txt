@@ -1,0 +1,4 @@
+[user]
+username=emp001
+password=Password@1234
+type=2

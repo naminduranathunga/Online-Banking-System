@@ -1,0 +1,4 @@
+[user]
+username=test
+password=test
+type=1

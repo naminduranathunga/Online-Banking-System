@@ -13,7 +13,7 @@ file(GLOB LIBRARIES "lib/*.cpp")
 
 # Add the main CPP file to the project
 set(MAIN_FILE "main.cpp")
-#set(UNIT_TEST_FILE "unit_test.cpp")
+set(UNIT_TEST_FILE "test.cpp")
 
 # Set the generator to "MinGW Makefiles"
 set(CMAKE_GENERATOR "MinGW Makefiles")
@@ -24,4 +24,7 @@ add_executable(BankingSystem ${SOURCES} ${LIBRARIES} ${MAIN_FILE})
 
 #unit tests
 #add_executable(test ${SOURCES} ${SOURCES_COMMANDS} ${UNIT_TESTS} ${UNIT_TEST_FILE})
+#file(GLOB U_TEST_SOURCES "inc/Account.cpp" "inc/SavingsAccount.cpp" "inc/CurrentAccount.cpp")
+
+#add_executable(UnitTest ${U_TEST_SOURCES} ${LIBRARIES} ${UNIT_TEST_FILE})
 

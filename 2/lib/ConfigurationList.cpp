@@ -29,8 +29,7 @@ void ConfigurationList::LoadFromFile() {
 
 	if (!file.is_open()) {
 		this->isLoaded = false;
-		//return;
-		throw "File not found";
+		return;
 	}
 
 	string line;

@@ -224,6 +224,54 @@ inc/Customer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Customer.cpp.s
 .PHONY : inc/Customer.cpp.s
 
+inc/Employee.obj: inc/Employee.cpp.obj
+.PHONY : inc/Employee.obj
+
+# target to build an object file
+inc/Employee.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Employee.cpp.obj
+.PHONY : inc/Employee.cpp.obj
+
+inc/Employee.i: inc/Employee.cpp.i
+.PHONY : inc/Employee.i
+
+# target to preprocess a source file
+inc/Employee.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Employee.cpp.i
+.PHONY : inc/Employee.cpp.i
+
+inc/Employee.s: inc/Employee.cpp.s
+.PHONY : inc/Employee.s
+
+# target to generate assembly for a file
+inc/Employee.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/Employee.cpp.s
+.PHONY : inc/Employee.cpp.s
+
+inc/SavingsAccount.obj: inc/SavingsAccount.cpp.obj
+.PHONY : inc/SavingsAccount.obj
+
+# target to build an object file
+inc/SavingsAccount.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/SavingsAccount.cpp.obj
+.PHONY : inc/SavingsAccount.cpp.obj
+
+inc/SavingsAccount.i: inc/SavingsAccount.cpp.i
+.PHONY : inc/SavingsAccount.i
+
+# target to preprocess a source file
+inc/SavingsAccount.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/SavingsAccount.cpp.i
+.PHONY : inc/SavingsAccount.cpp.i
+
+inc/SavingsAccount.s: inc/SavingsAccount.cpp.s
+.PHONY : inc/SavingsAccount.s
+
+# target to generate assembly for a file
+inc/SavingsAccount.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankingSystem.dir\build.make CMakeFiles/BankingSystem.dir/inc/SavingsAccount.cpp.s
+.PHONY : inc/SavingsAccount.cpp.s
+
 inc/User.obj: inc/User.cpp.obj
 .PHONY : inc/User.obj
 
@@ -341,6 +389,12 @@ help:
 	@echo ... inc/Customer.obj
 	@echo ... inc/Customer.i
 	@echo ... inc/Customer.s
+	@echo ... inc/Employee.obj
+	@echo ... inc/Employee.i
+	@echo ... inc/Employee.s
+	@echo ... inc/SavingsAccount.obj
+	@echo ... inc/SavingsAccount.i
+	@echo ... inc/SavingsAccount.s
 	@echo ... inc/User.obj
 	@echo ... inc/User.i
 	@echo ... inc/User.s

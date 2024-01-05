@@ -1,0 +1,5 @@
+Date:0    Amount50    TransactionDEPOSIT    Balance1100    
+Date:0    Amount200    TransactionDEPOSIT    Balance1300    
+Date:0    Amount:50    Transaction:DEPOSIT    Balance:1350    
+Date:5    Amount:300    Transaction:Deposit    Balance:1650    
+Date:6    Amount:100    Transaction:Deposit    Balance:1550    

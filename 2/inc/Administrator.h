@@ -8,29 +8,33 @@
 
 #include <iostream>
 #include "../lib/ConfigurationList.h"
+#include "User.h"
 #include <cmath>
 
 using namespace std;
 
 
-class Administrator {
+class Administrator : public User{
 public:
-    int day;
+
     double annualInterestRate;
+    int day;
+
+    Administrator(const string& username, const string& password, int type, ConfigurationList* config = nullptr);
+
+    void menu() override;
     
-    Administrator();
-    void addEmployee(string employeeName);
+    void addEmployee();
 
     void increaseDateByOne();
 
     void setAnnualInterest();
 
-    void checkOverdrafts();
+    void checkOverdrafts(string account);
 
-    double calculateOverdraftCharge(double overdraftAmount);
+    double calculateOverdraftCharge(double amount);
 
-    double calculateAnnualInterest();
+    void calculateDailyInterest(string acc);
+
 };
-
-
 

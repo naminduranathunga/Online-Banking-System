@@ -6,7 +6,8 @@
  * @author Namindu Ranathunga
 */
 
-#pragma once
+#ifndef CUSTOMER_H
+#define CUSTOMER_H 1
 
 #include <vector>
 #include "User.h"
@@ -16,13 +17,17 @@
 class Customer : public User {
     public:
         Customer(const string& username, const string& password, int type, ConfigurationList* config = nullptr);
-        void menu();
+        void menu() override;
         void viewTransections();
         void depositMoney();
         void withdrawMoney();
+        void addAccount(Account* account);
+        void save() override; // override
 
     private:
         vector<Account*> accounts;
 
         int AskUserToSelectAccount();  // returns the index of the selected account
 };
+
+#endif // !CUSTOMER_H

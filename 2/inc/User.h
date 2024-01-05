@@ -1,10 +1,6 @@
-/*****************************************************************//**
- * \file   User.h
- * \brief
- *
- * \author Rashmi
- * \date   January 2024
- *********************************************************************/
+#ifndef USER_H
+#define USER_H 1
+
 
 #include <iostream>
 #include <string>
@@ -14,6 +10,9 @@ using namespace std;
 #define USER_TYPE_ADMINISTRATOR 1
 #define USER_TYPE_BANK_EMPLOYEE 2
 #define USER_TYPE_CUSTOMER 3
+
+//Namindu
+class BankingSystem;
 
 class User {
 public:
@@ -26,6 +25,7 @@ public:
         static const int BANK_EMPLOYEE = 2;
         static const int CUSTOMER = 3;
     };
+    BankingSystem* system_ref;
 
     User(const string& username, const string& password, int type);
 
@@ -39,15 +39,15 @@ public:
     static User* fromFile(string filename);
 
     // Namindu
-    void save();
+    virtual void save();
 
     // Namindu
     virtual void menu();
 
-private:
+protected:
     string username;
     string password;
     int type;
 };
 
-
+#endif // !USER_H

@@ -1,0 +1,4 @@
+[account]
+username=Peter
+account_type=0
+balance=1050.000000

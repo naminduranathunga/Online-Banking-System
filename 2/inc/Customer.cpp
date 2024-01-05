@@ -13,19 +13,8 @@ Customer::Customer(const string& username, const string& password, int type, Con
         for (int i = 0; i < blocks.size(); i++) {
             PropertyBlock* block = blocks[i];
             if (block->GetName() == "account") {
-                /*
-                Add to accounts vector
-
-                string accountNumber = block->GetProperty("accountNumber");
-                string accountType = block->GetProperty("accountType");
-                string balance = block->GetProperty("balance");
-                string interestRate = block->GetProperty("interestRate");
-                string interestType = block->GetProperty("interestType");
-                string dateCreated = block->GetProperty("dateCreated");
-                string status = block->GetProperty("status");
-
-                Account* account = new Account(accountNumber, accountType, balance, interestRate, interestType, dateCreated, status);
-                this->accounts.push_back(account);*/
+                string accountNumber = block->GetPropertyValue("account_no");
+                this->accounts.push_back(Account::fromFromFile(stol(accountNumber)));
             }
         }
     }
@@ -51,13 +40,13 @@ void Customer::menu() {
 
         switch (choice) {
         case 1:
-            cout << "View Transections" << endl;
+            viewTransections();
             break;
         case 2:
-            cout << "Deposit Money" << endl;
+            depositMoney();
             break;
         case 3:
-            cout << "Withdraw Money" << endl;
+            withdrawMoney();
             break;
         case 4:
             cout << "Thanks for using our system" << endl;
@@ -70,7 +59,6 @@ void Customer::menu() {
         system("pause");
     }
 
-    system("pause");    
 }
 
 // Namindu
@@ -82,6 +70,8 @@ void Customer::viewTransections() {
     int choice = this->AskUserToSelectAccount();
     if (choice == -1) return;
 
+    Account* account = this->accounts[choice];
+    account->showTransactions();
 }
 
 
@@ -94,6 +84,12 @@ void Customer::depositMoney() {
     int choice = this->AskUserToSelectAccount();
     if (choice == -1) return;
 
+    cout << "Enter amount to deposit: ";
+    float amount;
+    cin >> amount;
+
+    Account* account = this->accounts[choice];
+    account->deposit("DEPOSIT", amount, 0);
     cout << "Deposit Money" << endl;
 }
 
@@ -106,6 +102,13 @@ void Customer::withdrawMoney() {
     cout << endl;
     int choice = this->AskUserToSelectAccount();
     if (choice == -1) return;
+    
+    cout << "Enter amount to withdraw: ";
+    float amount;
+    cin >> amount;
+
+    Account* account = this->accounts[choice];
+    account->withdraw("WITHDRAW", amount, 0);
     
     cout << "Withdraw Money" << endl;
 }
@@ -122,15 +125,21 @@ int Customer::AskUserToSelectAccount() {
     cout << endl;
     for (int i = 0; i < this->accounts.size(); i++) {
         //cout << i + 1 << ". " << this->accounts[i]->account_type << endl;
-        cout << i + 1 << ". " << "account_type   --- acc_number" << endl;
+        Account* account = this->accounts[i];
+        cout << i + 1 << ". " << "account_type:";
+        cout << (account->account_type == Account::AccountType::Savings?"Savings":account->account_type == Account::AccountType::Current?"Current":"Other");
+        cout << " --- Account No.:" << account->getAccountNo() << "  --- Balance:" << account->getBalance() << endl;
     }
-    
+    cout << 0 << ". " << "Back" << endl;
+
     int max_tries = 3;
     int tries = 0;
     while (tries < max_tries) {
         int choice;
         cout << "Enter your choice: ";
         cin >> choice;
+
+        if (choice == 0) return -1; // exit
 
         choice--; // decrement by 1 to match the index
         if (choice < 0 || choice >= this->accounts.size()) {
@@ -143,4 +152,27 @@ int Customer::AskUserToSelectAccount() {
     }
     
     return -1;
+}
+
+
+void Customer::addAccount(Account* account) {
+    this->accounts.push_back(account);
+    save();
+}
+
+void Customer::save() {
+    ConfigurationList* config = new ConfigurationList("data/users/" + this->username + ".txt");
+    config->AddBlock("user");
+    config->GetBlock("user")->AddProperty("username", this->username);
+    config->GetBlock("user")->AddProperty("password", this->password);
+    config->GetBlock("user")->AddProperty("type", to_string(this->type));
+
+    // save accounts
+    for (int i = 0; i < this->accounts.size(); i++) {
+        Account* account = this->accounts[i];
+        config->AddBlock("account");
+        config->GetBlock("account")->AddProperty("account_no", to_string(account->getAccountNo()));
+        config->GetBlock("account")->AddProperty("account_type", to_string(account->account_type));
+    }
+    config->SaveToFile();
 }

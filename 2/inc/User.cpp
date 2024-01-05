@@ -7,6 +7,9 @@
  *********************************************************************/
 
 #include "User.h"
+#include "Customer.h"
+#include "Employee.h"
+#include "Administrator.h"
 #include "../lib/ConfigurationList.h"
 
 User::User(const string& uname, const string& pwd, int t)
@@ -36,7 +39,15 @@ User* User::fromFile(string filename) {
     string password = config->GetBlock("user")->GetPropertyValue("password");
     int type = stoi(config->GetBlock("user")->GetPropertyValue("type"));
 
+    delete config;
     //Create user according to the type
+    if (type == User::UserType::CUSTOMER){
+        return new Customer(username, password, type, config);
+    } else if (type == User::UserType::BANK_EMPLOYEE){
+        return new Employee(username, password, type);
+    } else if (type == User::UserType::ADMINISTRATOR){
+        return new Administrator(username, password, type);
+    }
 
     return new User(username, password, type);
 }
@@ -50,10 +61,12 @@ void User::save() {
     config->GetBlock("user")->AddProperty("password", this->password);
     config->GetBlock("user")->AddProperty("type", to_string(this->type));
     config->SaveToFile();
+
+    delete config;
 }
 
 // Namindu
 void User::menu() {
-    std::cout << "Welcome " << this->username << endl;
+    std::cout << "Welcome " << this->username << "  Type:" << this->type <<endl;
     system("pause");
 }

@@ -1,0 +1,3 @@
+Date:0    Amount500    TransactionWITHDRAW    Balance550    
+Date:0    Amount:450    Transaction:DEPOSIT    Balance:1000    
+Date:0    Amount:150    Transaction:WITHDRAW    Balance:850    

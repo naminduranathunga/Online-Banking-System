@@ -7,6 +7,7 @@
  *********************************************************************/
 
 #include "BankingSystem.h"
+#include "Account.h"
 
 using namespace std;
 
@@ -88,6 +89,7 @@ void BankingSystem::login() {
 		cout << "Login successful" << endl;
 		system("pause");
 
+		user->system_ref = this; // set the parent reference
 		user->menu();
 	}
 	else {

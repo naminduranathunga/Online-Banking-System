@@ -5,44 +5,45 @@
  * \author Himaya Kaumadi
  * \date   January 2024
  *********************************************************************/
+#ifndef ACCOUNT_H
+#define ACCOUNT_H 1
+
 #include <iostream>
 #include <string>
+
+#include "../lib/ConfigurationLoaderLib.h"
+
+
 using namespace std;
 
 class Account
 {
-    private:
-    string username;
-    long account_no;
-    float balance;
-    int account_type;
+    protected:
+        long account_no;
+        float balance;
 
     public:
-    void load(long account_no);
-    void save(long account_no,int day, float amount, string text, float balance);
-    void deposit(long account_no,string text, float amount, int day);
-    void withdraw(long account_no,string text, float amount, int day);
+        enum AccountType{
+            None = 0,
+            Savings = 1,
+            Current = 2
+        };
+        // publically accessible variables
+        string username;
+        AccountType account_type;
+
+
+        Account();
+        Account(long account_no, string username, AccountType account_type, float balance);
+        ~Account();
+        static Account* fromFromFile(long account_no);
+        void save();
+        void deposit(string text, float amount, int day);
+        void withdraw(string text, float amount, int day);
+        void showTransactions();
+        float getBalance();
+        long getAccountNo();
+
 };
 
-int main()
-{
-    Account account;
-    long accountNumber;
-
-    cout << "Enter the account number: ";
-    cin >> accountNumber;
-
-    // Load account details
-    account.load(accountNumber);
-
-    // Perform a deposit
-    account.deposit(accountNumber, "Deposit", 100.0, 1);
-
-    // Perform a withdrawal
-    account.withdraw(accountNumber, "Withdrawal", 50.0, 2);
-
-    // You can add more test cases as needed
-
-    return 0;
-}
-
+#endif // ACCOUNT_H
